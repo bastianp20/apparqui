@@ -1,0 +1,7 @@
+{
+  "name": "apparqui",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
