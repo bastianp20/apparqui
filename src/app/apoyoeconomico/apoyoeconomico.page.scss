@@ -1,0 +1,47 @@
+.background {
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #eeecec;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .card {
+    background-color: #6e6e6e;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .card-subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  ion-item {
+    --background: transparent;
+    color: #0e0d0d;
+  }
+  
+  ion-button {
+    margin-top: 10px;
+  }
+  
+  ion-textarea {
+    color: #ffffff;
+  }
+  

@@ -1,20 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="background">
+    <div class="container">
+      <div class="card">
+        <h2 class="card-title">🎮 Perfil de Gaming Host</h2>
+        <p>Nombre: <strong>Gaming Host 1</strong></p>
+        <p>Programación: Todos los días a las 8 PM</p>
+        <ion-button expand="block" class="button" routerLink="/perfil">Ver perfil completo</ion-button>
+      </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <div class="card">
+        <h2 class="card-title">🔴 Transmisión en Vivo</h2>
+        <p>Disfruta de la transmisión en tiempo real</p>
+        <ion-button expand="block" class="button" routerLink="/pvivo">Iniciar transmisión</ion-button>
+      </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <div class="card">
+        <h2 class="card-title">⭐ Suscripciones</h2>
+        <p>Obtén beneficios exclusivos y notificaciones</p>
+        <ion-button expand="block" class="button" routerLink="/suscripciones">Suscribirse</ion-button>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">💸 Apoyo Económico</h2>
+        <p>Contribuye al Gaming Host con un depósito</p>
+        <ion-button expand="block" class="button" routerLink="/apoyoeconomico">Hacer un depósito</ion-button>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">🎲 Gaming Coins</h2>
+        <p>Compra monedas para interacciones especiales</p>
+        <ion-button expand="block" class="button" routerLink="/gamingcoins">Comprar Gaming Coins</ion-button>
+      </div>
+    </div>
   </div>
 </ion-content>

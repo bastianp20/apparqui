@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'apoyoeconomico',
+    loadChildren: () => import('./apoyoeconomico/apoyoeconomico.module').then( m => m.ApoyoeconomicoPageModule)
+  },
+  {
+    path: 'gamingcoins',
+    loadChildren: () => import('./gamingcoins/gamingcoins.module').then( m => m.GamingcoinsPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'pvivo',
+    loadChildren: () => import('./pvivo/pvivo.module').then( m => m.PvivoPageModule)
+  },
+  {
+    path: 'suscripciones',
+    loadChildren: () => import('./suscripciones/suscripciones.module').then( m => m.SuscripcionesPageModule)
+  },
 ];
 
 @NgModule({

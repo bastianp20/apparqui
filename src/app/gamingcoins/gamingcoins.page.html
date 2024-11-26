@@ -1,0 +1,38 @@
+<ion-content>
+  <div id="fondo-coins">
+    <div id="tarjeta-coins" class="center-content">
+      <ion-title class="titulo-principal">Gaming Coins</ion-title>
+
+      <p class="descripcion">Adquiere Gaming Coins para desbloquear interacciones especiales y apoyar a tus Gaming Hosts favoritos.</p>
+
+      <ion-list class="opciones-compra">
+        <ion-item>
+          <ion-label>100 Coins</ion-label>
+          <ion-button color="primary" fill="solid" class="boton-compra" (click)="comprarCoins(100)">Comprar</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-label>500 Coins</ion-label>
+          <ion-button color="secondary" fill="solid" class="boton-compra" (click)="comprarCoins(500)">Comprar</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-label>1000 Coins</ion-label>
+          <ion-button color="tertiary" fill="solid" class="boton-compra" (click)="comprarCoins(1000)">Comprar</ion-button>
+        </ion-item>
+      </ion-list>
+
+      <div id="historial-coins">
+        <h2>Historial de Compras</h2>
+        <p class="info-historial" *ngIf="!historial.length">No tienes compras registradas.</p>
+        <ion-list *ngIf="historial.length">
+          <ion-item *ngFor="let compra of historial">
+            <ion-label>{{ compra.fecha }} - {{ compra.monto }} Coins</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <ion-button expand="block" color="secondary" routerLink="/home">
+        Volver
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

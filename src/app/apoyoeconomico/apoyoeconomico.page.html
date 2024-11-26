@@ -1,0 +1,70 @@
+<ion-content>
+  <div class="background">
+    <div class="container">
+      <div class="card">
+        <h2 class="card-title">Apoyo Económico</h2>
+        <p>Contribuye para apoyar a tus Gaming Hosts favoritos y mejorar sus transmisiones.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-subtitle">Selecciona un Monto</h3>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button expand="block" color="tertiary" (click)="seleccionarMonto(5)">
+                $5
+              </ion-button>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button expand="block" color="tertiary" (click)="seleccionarMonto(10)">
+                $10
+              </ion-button>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button expand="block" color="tertiary" (click)="seleccionarMonto(20)">
+                $20
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating">Monto Personalizado</ion-label>
+                <ion-input [(ngModel)]="montoPersonalizado" type="number"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <div class="card">
+        <h3 class="card-subtitle">Mensaje Personalizado</h3>
+        <ion-item>
+          <ion-label position="floating">Escribe un mensaje</ion-label>
+          <ion-textarea [(ngModel)]="mensaje"></ion-textarea>
+        </ion-item>
+      </div>
+
+      <div class="card">
+        <ion-button expand="block" color="primary" (click)="confirmarDonacion()">
+          Confirmar Donación
+        </ion-button>
+      </div>
+
+      <div class="card" *ngIf="historial.length > 0">
+        <h3 class="card-subtitle">Historial de Donaciones</h3>
+        <ion-list>
+          <ion-item *ngFor="let donacion of historial">
+            <p>{{ donacion }}</p>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div class="card">
+        <ion-button expand="block" color="secondary" routerLink="/home">
+          Volver
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

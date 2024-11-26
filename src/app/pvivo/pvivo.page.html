@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Compartir Pantalla</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Botón Volver usando routerLink -->
+  <ion-button expand="block" color="secondary" routerLink="/home">
+    Volver
+  </ion-button>
+
+  <ion-button expand="block" id="shareScreenButton" (click)="startScreenShare()">Compartir Pantalla</ion-button>
+  <ion-button expand="block" id="stopShareButton" (click)="stopScreenShare()" hidden>Detener</ion-button>
+  <video id="screenVideo" autoplay playsinline controls muted></video>
+</ion-content>

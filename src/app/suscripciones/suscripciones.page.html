@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="background">
+    <div class="container">
+
+      <!-- Estado de Suscripción Actual -->
+      <div class="card">
+        <h2 class="card-title">Tu Suscripción</h2>
+        <p *ngIf="suscripcionActiva; else sinSuscripcion">
+          Estás suscrito al plan <strong>{{ suscripcionActual.nombre }}</strong>
+          hasta el <strong>{{ suscripcionActual.fechaExpiracion }}</strong>.
+        </p>
+        <ng-template #sinSuscripcion>
+          <p>No tienes una suscripción activa.</p>
+        </ng-template>
+      </div>
+
+      <!-- Planes de Suscripción -->
+      <div class="card">
+        <h2 class="card-title">Planes de Suscripción</h2>
+        <ion-list>
+          <ion-item *ngFor="let plan of planes">
+            <ion-label>
+              <h3>{{ plan.nombre }}</h3>
+              <p>{{ plan.descripcion }}</p>
+              <p><strong>${{ plan.precio }}/mes</strong></p>
+            </ion-label>
+            <ion-button (click)="suscribirse(plan)" color="primary" expand="block">
+              Suscribirse
+            </ion-button>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <!-- Historial de Suscripciones -->
+      <div class="card" *ngIf="historial.length > 0">
+        <h2 class="card-title">Historial de Suscripciones</h2>
+        <ion-list>
+          <ion-item *ngFor="let suscripcion of historial">
+            <p>{{ suscripcion }}</p>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+  <ion-button expand="block" color="secondary" routerLink="/home">
+    Volver
+  </ion-button>
+</ion-content>

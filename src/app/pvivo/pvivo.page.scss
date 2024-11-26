@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #4caf50; /* Verde moderno */
+    --secondary-color: #388e3c;
+    --background-color: #121212;
+    --button-text-color: #ffffff;
+    --button-border-radius: 12px;
+    --video-border-radius: 20px;
+    --box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    --transition-speed: 0.3s;
+  }
+  
+  ion-content {
+    --background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+    gap: 20px; /* Espacio entre el video y los botones */
+    height: 100vh; /* Ocupar toda la altura de la ventana */
+    box-sizing: border-box;
+  }
+  
+  ion-header {
+    --background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --color: var(--button-text-color);
+    text-align: center;
+  }
+  
+  ion-toolbar {
+    box-shadow: var(--box-shadow);
+  }
+  
+  ion-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--button-text-color);
+  }
+  
+  ion-button {
+    width: 70%; /* Botones más anchos pero centrados */
+    max-width: 300px; /* Límite para pantallas grandes */
+    --background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --color: var(--button-text-color);
+    --border-radius: var(--button-border-radius);
+    --box-shadow: var(--box-shadow);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  ion-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.7);
+  }
+  
+  ion-button:disabled {
+    --background: #555;
+    --color: #999;
+    --box-shadow: none;
+    cursor: not-allowed;
+  }
+  
+  video {
+    width: 100%; /* El video ocupa el 100% del contenedor */
+    max-width: 800px; /* Ancho máximo para pantallas grandes */
+    height: auto; /* Mantener la proporción */
+    border-radius: var(--video-border-radius);
+    box-shadow: var(--box-shadow);
+    animation: popIn 0.8s ease-out;
+    border: 4px solid var(--primary-color);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
