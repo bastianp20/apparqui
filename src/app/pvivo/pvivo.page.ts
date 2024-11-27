@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class PvivoPage {
   private screenStream: MediaStream | null = null;
 
-  // Método para iniciar la compartición de pantalla
+  // funcion para compartir la pantalla 
   async startScreenShare() {
     try {
       this.screenStream = await navigator.mediaDevices.getDisplayMedia({
@@ -24,7 +24,7 @@ export class PvivoPage {
     }
   }
 
-  // Método para detener la compartición de pantalla
+  // funcion que deja de compartir la pantalla 
   stopScreenShare() {
     if (this.screenStream) {
       this.screenStream.getTracks().forEach((track) => track.stop());

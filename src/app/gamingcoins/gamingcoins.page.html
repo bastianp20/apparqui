@@ -4,7 +4,7 @@
       <ion-title class="titulo-principal">Gaming Coins</ion-title>
 
       <p class="descripcion">Adquiere Gaming Coins para desbloquear interacciones especiales y apoyar a tus Gaming Hosts favoritos.</p>
-
+<!-- aquí está el contenedor de las compras de coins con los coins a comprar predeterminados-->>
       <ion-list class="opciones-compra">
         <ion-item>
           <ion-label>100 Coins</ion-label>
@@ -19,7 +19,7 @@
           <ion-button color="tertiary" fill="solid" class="boton-compra" (click)="comprarCoins(1000)">Comprar</ion-button>
         </ion-item>
       </ion-list>
-
+      <!-- Aquí se guarda el historial de compras en los coins -->>
       <div id="historial-coins">
         <h2>Historial de Compras</h2>
         <p class="info-historial" *ngIf="!historial.length">No tienes compras registradas.</p>
@@ -29,7 +29,6 @@
           </ion-item>
         </ion-list>
       </div>
-
       <ion-button expand="block" color="secondary" routerLink="/home">
         Volver
       </ion-button>

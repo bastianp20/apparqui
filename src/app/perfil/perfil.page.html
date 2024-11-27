@@ -11,7 +11,7 @@
       <div class="profile-image">
         <img src="https://via.placeholder.com/150" alt="Perfil">
       </div>
-
+      <!--contenedor de datos para el perfil-->>
       <ion-item lines="none" class="editable-item">
         <ion-label position="floating">Nombre</ion-label>
         <ion-input [(ngModel)]="user.name" placeholder="Escribe tu nombre" clearInput></ion-input>
@@ -26,7 +26,7 @@
         <ion-label position="floating">Teléfono</ion-label>
         <ion-input [(ngModel)]="user.phone" placeholder="Escribe tu teléfono" clearInput></ion-input>
       </ion-item>
-
+      <!--esta parte guarda los cambios hechos -->>
       <ion-button expand="block" class="save-button" (click)="saveProfile()">Guardar Cambios</ion-button>
     </div>
   </div>
